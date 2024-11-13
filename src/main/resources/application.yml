@@ -1,15 +1,16 @@
+
 spring:
   profiles:
-    active: dev
+    active:
     include : secret
   threads:
     virtual:
       enabled: true
   datasource:
-    url: jdbc:h2:./nbe2_2_dev;MODE=MYSQL
+    url: jdbc:mysql://database-elastic.c74kmgiikxyu.ap-northeast-2.rds.amazonaws.com:3306/test_db
     #    DB_CLOSE_ON_EXIT=FALSE # MySQL 모드 설정
-    username: sa
-    password:
+    username: test
+    password: 1234
     driver-class-name: org.h2.Driver
   jpa:
     hibernate:
@@ -34,3 +35,5 @@ logging:
     org.hibernate.orm.jdbc.bind: TRACE
     org.hibernate.orm.jdbc.extract: TRACE
     org.springframework.transaction.interceptor: TRACE
+server:
+  port: 5000
