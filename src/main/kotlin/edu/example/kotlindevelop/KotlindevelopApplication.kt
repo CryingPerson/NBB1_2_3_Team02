@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 @EnableJpaRepositories
 @EnableJpaAuditing
 class KotlindevelopApplication
-
+//
 fun main(args: Array<String>) {
 	runApplication<KotlindevelopApplication>(*args)
 }
