@@ -7,7 +7,7 @@ spring:
     virtual:
       enabled: true
   datasource:
-    url: jdbc:mysql://database-elastic.c74kmgiikxyu.ap-northeast-2.rds.amazonaws.com:3306/test_db
+    url: jdbc:mysql://database-elastic.c74kmgiikxyu.ap-northeast-2.rds.amazonaws.com:3306/test_db2
     #    DB_CLOSE_ON_EXIT=FALSE # MySQL 모드 설정
     username: test1
     password: 1234
