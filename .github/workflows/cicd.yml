@@ -26,12 +26,12 @@ jobs:
         run: ./gradlew clean build
 
       # application.yml 생성
-      - name: Create application.yml
-        run: echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
+      - run: touch ./src/main/resources/application.yml
+      - run: echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
 
       # application-secret.yml 생성
-      - name: Create application-secret.yml
-        run: echo "${{ secrets.APPLICATION_SECRET_YML }}" > ./src/main/resources/application-secret.yml
+      - run: touch ./src/main/resources/application-secret.yml
+      - run: echo "${{ secrets.APPLICATION_SECRET_YML }}" > ./src/main/resources/application-secret.yml
 
       - uses: actions/upload-artifact@v3
         with:
